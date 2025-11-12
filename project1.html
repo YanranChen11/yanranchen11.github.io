@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project 1 &#8212; Yanran&#39;s Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project1';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 16 Example" href="lecture_16_example.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Yanran's Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Yanran’s Portfolio
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture_16_example.html">Lecture 16 Example</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 1</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/project1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-1">
+<h1>Project 1<a class="headerlink" href="#project-1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>NYPD Arrest Data Analysis</p></li>
+<li><p>This project analyzes NYPD arrest data using both <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and the Python standard library.</p></li>
+<li><p>It calculates the mean, median, and mode of arrest precincts, and includes text-based
+visualizations of arrests by precinct.</p></li>
+<li><p>source: <a class="reference external" href="https://data.cityofnewyork.us/Public-Safety/NYPD-Arrest-Data-Year-to-Date-/uip8-fykc/about_data">https://data.cityofnewyork.us/Public-Safety/NYPD-Arrest-Data-Year-to-Date-/uip8-fykc/about_data</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df_arrest</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;NYPD_Arrest_Data.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explore columns</span>
+<span class="n">df_arrest</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">df_arrest</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 212486 entries, 0 to 212485
+Data columns (total 19 columns):
+ #   Column             Non-Null Count   Dtype  
+---  ------             --------------   -----  
+ 0   ARREST_KEY         212486 non-null  int64  
+ 1   ARREST_DATE        212486 non-null  object 
+ 2   PD_CD              212486 non-null  int64  
+ 3   PD_DESC            212486 non-null  object 
+ 4   KY_CD              212470 non-null  float64
+ 5   OFNS_DESC          212486 non-null  object 
+ 6   LAW_CODE           212486 non-null  object 
+ 7   LAW_CAT_CD         211482 non-null  object 
+ 8   ARREST_BORO        212486 non-null  object 
+ 9   ARREST_PRECINCT    212486 non-null  int64  
+ 10  JURISDICTION_CODE  212486 non-null  int64  
+ 11  AGE_GROUP          212486 non-null  object 
+ 12  PERP_SEX           212486 non-null  object 
+ 13  PERP_RACE          212486 non-null  object 
+ 14  X_COORD_CD         212486 non-null  int64  
+ 15  Y_COORD_CD         212486 non-null  int64  
+ 16  Latitude           212486 non-null  float64
+ 17  Longitude          212486 non-null  float64
+ 18  Location           212486 non-null  object 
+dtypes: float64(3), int64(6), object(10)
+memory usage: 30.8+ MB
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ARREST_KEY</th>
+      <th>ARREST_DATE</th>
+      <th>PD_CD</th>
+      <th>PD_DESC</th>
+      <th>KY_CD</th>
+      <th>OFNS_DESC</th>
+      <th>LAW_CODE</th>
+      <th>LAW_CAT_CD</th>
+      <th>ARREST_BORO</th>
+      <th>ARREST_PRECINCT</th>
+      <th>JURISDICTION_CODE</th>
+      <th>AGE_GROUP</th>
+      <th>PERP_SEX</th>
+      <th>PERP_RACE</th>
+      <th>X_COORD_CD</th>
+      <th>Y_COORD_CD</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>298760433</td>
+      <td>01/02/2025</td>
+      <td>782</td>
+      <td>WEAPONS, POSSESSION, ETC</td>
+      <td>236.0</td>
+      <td>DANGEROUS WEAPONS</td>
+      <td>PL 2650101</td>
+      <td>M</td>
+      <td>Q</td>
+      <td>115</td>
+      <td>3</td>
+      <td>(null)</td>
+      <td>(null)</td>
+      <td>BLACK</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>POINT (0 0)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>299030225</td>
+      <td>01/07/2025</td>
+      <td>105</td>
+      <td>STRANGULATION 1ST</td>
+      <td>106.0</td>
+      <td>FELONY ASSAULT</td>
+      <td>PL 1211200</td>
+      <td>F</td>
+      <td>M</td>
+      <td>28</td>
+      <td>0</td>
+      <td>25-44</td>
+      <td>M</td>
+      <td>BLACK</td>
+      <td>997439</td>
+      <td>233857</td>
+      <td>40.808558</td>
+      <td>-73.952357</td>
+      <td>POINT (-73.952357 40.808558)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>299127494</td>
+      <td>01/08/2025</td>
+      <td>849</td>
+      <td>NY STATE LAWS,UNCLASSIFIED VIO</td>
+      <td>677.0</td>
+      <td>OTHER STATE LAWS</td>
+      <td>LOC00000V0</td>
+      <td>V</td>
+      <td>K</td>
+      <td>81</td>
+      <td>1</td>
+      <td>(null)</td>
+      <td>(null)</td>
+      <td>WHITE</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>POINT (0 0)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>299188536</td>
+      <td>01/09/2025</td>
+      <td>259</td>
+      <td>CRIMINAL MISCHIEF,UNCLASSIFIED 4</td>
+      <td>351.0</td>
+      <td>CRIMINAL MISCHIEF &amp; RELATED OF</td>
+      <td>PL 1450001</td>
+      <td>M</td>
+      <td>M</td>
+      <td>7</td>
+      <td>2</td>
+      <td>(null)</td>
+      <td>(null)</td>
+      <td>BLACK</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>POINT (0 0)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>299533742</td>
+      <td>01/16/2025</td>
+      <td>155</td>
+      <td>RAPE 2</td>
+      <td>104.0</td>
+      <td>RAPE</td>
+      <td>PL 1303001</td>
+      <td>F</td>
+      <td>K</td>
+      <td>81</td>
+      <td>0</td>
+      <td>18-24</td>
+      <td>F</td>
+      <td>BLACK</td>
+      <td>1005319</td>
+      <td>190473</td>
+      <td>40.689464</td>
+      <td>-73.924029</td>
+      <td>POINT (-73.9240290899499 40.6894642952604)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
+
+<span class="c1"># Pick one numeric column - arrest precinct</span>
+<span class="n">col</span> <span class="o">=</span> <span class="s2">&quot;ARREST_PRECINCT&quot;</span>
+
+<span class="n">mean</span> <span class="o">=</span> <span class="n">df_arrest</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">median</span> <span class="o">=</span> <span class="n">df_arrest</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="n">df_arrest</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean:&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">median</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mode:&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean: 63.07742627749593
+Median: 62.0
+Mode: 14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The harder way</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;NYPD_Arrest_Data.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">first_line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">first_line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;ARREST_KEY&quot;,&quot;ARREST_DATE&quot;,&quot;PD_CD&quot;,&quot;PD_DESC&quot;,&quot;KY_CD&quot;,&quot;OFNS_DESC&quot;,&quot;LAW_CODE&quot;,&quot;LAW_CAT_CD&quot;,&quot;ARREST_BORO&quot;,&quot;ARREST_PRECINCT&quot;,&quot;JURISDICTION_CODE&quot;,&quot;AGE_GROUP&quot;,&quot;PERP_SEX&quot;,&quot;PERP_RACE&quot;,&quot;X_COORD_CD&quot;,&quot;Y_COORD_CD&quot;,&quot;Latitude&quot;,&quot;Longitude&quot;,&quot;Location&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split CSV line by commas, but ignore commas inside quotes</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">smart_split</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">inside_quotes</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">:</span>
+            <span class="n">inside_quotes</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">inside_quotes</span>
+        <span class="k">elif</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;,&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">inside_quotes</span><span class="p">:</span>
+            <span class="n">parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">+=</span> <span class="n">ch</span>
+    <span class="n">parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The hard way -- Continued</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="n">h</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">first_line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+<span class="n">col_index</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;ARREST_PRECINCT&quot;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">smart_split</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">col_index</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="n">col_index</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+<span class="c1"># Mean</span>
+<span class="n">mean_h</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Median</span>
+<span class="n">sorted_data</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sorted_data</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">median_h</span> <span class="o">=</span> <span class="p">(</span><span class="n">sorted_data</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sorted_data</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">median_h</span> <span class="o">=</span> <span class="n">sorted_data</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># Mode</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">freq</span><span class="p">:</span>
+        <span class="n">freq</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="n">freq</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">freq</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">most_common</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">highest_count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">freq</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">freq</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">highest_count</span><span class="p">:</span>
+        <span class="n">highest_count</span> <span class="o">=</span> <span class="n">freq</span><span class="p">[</span><span class="n">val</span><span class="p">]</span>
+        <span class="n">most_common</span> <span class="o">=</span> <span class="n">val</span>
+
+<span class="n">mode_h</span> <span class="o">=</span> <span class="n">most_common</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean:&quot;</span><span class="p">,</span> <span class="n">mean_h</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">median_h</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mode:&quot;</span><span class="p">,</span> <span class="n">mode_h</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean: 63.077181918723674
+Median: 62
+Mode: 14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data visualization</span>
+
+<span class="c1"># 1. All precincts</span>
+<span class="c1"># Count how many arrests per precinct</span>
+<span class="n">precinct_counts</span> <span class="o">=</span> <span class="n">df_arrest</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+<span class="c1"># Scale bar lengths so it fits nicely on screen</span>
+<span class="n">max_count</span> <span class="o">=</span> <span class="n">precinct_counts</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">/</span> <span class="n">max_count</span>  <span class="c1"># each bar up to 50 chars long</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Arrests by Precinct (each █ ~ proportional to arrests)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Draw bar chart using print() and string multiplication</span>
+<span class="k">for</span> <span class="n">precinct</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">precinct_counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s2">&quot;█&quot;</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">precinct</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;3</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Arrests by Precinct (each █ ~ proportional to arrests)
+============================================================
+  1: ██████████████████████ (3510)
+  5: ██████████████████ (2880)
+  6: ███████████ (1905)
+  7: ██████████ (1593)
+  9: ██████████ (1613)
+ 10: █████████ (1456)
+ 13: ███████████████████ (3029)
+ 14: ██████████████████████████████████████████████████ (7947)
+ 17: █████ (899)
+ 18: ██████████████████████████ (4205)
+ 19: ████████████ (2005)
+ 20: ██████ (1045)
+ 22:  (92)
+ 23: █████████████ (2201)
+ 24: █████████ (1461)
+ 25: ████████████████ (2624)
+ 26: ███████ (1143)
+ 28: ███████████████ (2389)
+ 30: ████████ (1428)
+ 32: ██████████████ (2367)
+ 33: ████████████ (1933)
+ 34: ███████████████████ (3067)
+ 40: ██████████████████████████████████████████████ (7423)
+ 41: ███████████████████████ (3748)
+ 42: ████████████████████ (3279)
+ 43: ████████████████████████ (3819)
+ 44: █████████████████████████████████████ (5978)
+ 45: ██████████████ (2283)
+ 46: ████████████████████████████████ (5104)
+ 47: ████████████████████████████ (4560)
+ 48: █████████████████████ (3406)
+ 49: ████████████████ (2648)
+ 50: ████████ (1402)
+ 52: ██████████████████████████ (4228)
+ 60: ██████████████████████████ (4173)
+ 61: ████████████ (2065)
+ 62: ██████████████ (2340)
+ 63: ██████████ (1616)
+ 66: ██████████ (1610)
+ 67: ██████████████████████████ (4242)
+ 68: ███████████ (1839)
+ 69: ████████ (1366)
+ 70: ███████████████████ (3020)
+ 71: ████████████ (1922)
+ 72: █████████████████ (2836)
+ 73: ████████████████████████████ (4580)
+ 75: ███████████████████████████████████████████ (6953)
+ 76: ███████ (1263)
+ 77: ████████████████ (2594)
+ 78: ███████████ (1842)
+ 79: █████████████████████ (3355)
+ 81: ██████████████ (2256)
+ 83: ████████████████████ (3297)
+ 84: ██████████████████ (2876)
+ 88: ███████ (1253)
+ 90: ███████████ (1833)
+ 94: ██████ (987)
+100: █████ (919)
+101: ████████████ (2031)
+102: ████████████████ (2690)
+103: █████████████████████████████████████ (6010)
+104: ███████████ (1758)
+105: ███████████ (1788)
+106: █████████████ (2084)
+107: █████████████ (2136)
+108: ██████████ (1731)
+109: █████████████████████ (3402)
+110: ███████████████████████████ (4409)
+111: ████ (697)
+112: ███████████ (1832)
+113: █████████████████████ (3411)
+114: █████████████████████ (3495)
+115: ████████████████████████ (3937)
+116: ██████████████ (2300)
+120: ██████████████████████████████ (4877)
+121: █████████████ (2081)
+122: ████████ (1350)
+123: ████ (760)
+============================================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the top 10 precincts so that I can match the precinct numbers with their names</span>
+<span class="n">df_arrest</span><span class="p">[</span><span class="s2">&quot;ARREST_PRECINCT&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ARREST_PRECINCT
+14     7947
+40     7423
+75     6953
+103    6010
+44     5978
+46     5104
+120    4877
+73     4580
+47     4560
+110    4409
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Top 10 precincts with names</span>
+
+<span class="c1"># Top 10 precincts and their counts</span>
+<span class="n">top10</span> <span class="o">=</span> <span class="n">df_arrest</span><span class="p">[</span><span class="s2">&quot;ARREST_PRECINCT&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Precinct name mapping (from NYPD)</span>
+<span class="n">precinct_names</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">14</span><span class="p">:</span> <span class="s2">&quot;Midtown South (Manhattan)&quot;</span><span class="p">,</span>
+    <span class="mi">40</span><span class="p">:</span> <span class="s2">&quot;Bronx – Mott Haven&quot;</span><span class="p">,</span>
+    <span class="mi">75</span><span class="p">:</span> <span class="s2">&quot;Brooklyn – East New York&quot;</span><span class="p">,</span>
+    <span class="mi">103</span><span class="p">:</span> <span class="s2">&quot;Queens – Jamaica&quot;</span><span class="p">,</span>
+    <span class="mi">44</span><span class="p">:</span> <span class="s2">&quot;Bronx – Concourse&quot;</span><span class="p">,</span>
+    <span class="mi">46</span><span class="p">:</span> <span class="s2">&quot;Bronx – University Heights&quot;</span><span class="p">,</span>
+    <span class="mi">120</span><span class="p">:</span> <span class="s2">&quot;Staten Island – St. George&quot;</span><span class="p">,</span>
+    <span class="mi">73</span><span class="p">:</span> <span class="s2">&quot;Brooklyn – Brownsville&quot;</span><span class="p">,</span>
+    <span class="mi">47</span><span class="p">:</span> <span class="s2">&quot;Bronx – Edenwald/Wakefield&quot;</span><span class="p">,</span>
+    <span class="mi">110</span><span class="p">:</span> <span class="s2">&quot;Queens – Elmhurst&quot;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 10 Precincts by Arrests (each █ ~ proportional to arrests)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<span class="n">max_top</span> <span class="o">=</span> <span class="n">top10</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">scale_top</span> <span class="o">=</span> <span class="mi">50</span> <span class="o">/</span> <span class="n">max_top</span>
+
+<span class="k">for</span> <span class="n">precinct</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">top10</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s2">&quot;█&quot;</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span> <span class="o">*</span> <span class="n">scale_top</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">precinct_names</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">precinct</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">precinct</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;3</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Top 10 Precincts by Arrests (each █ ~ proportional to arrests)
+======================================================================
+ 14: ██████████████████████████████████████████████████ (7947) Midtown South (Manhattan)
+ 40: ██████████████████████████████████████████████ (7423) Bronx – Mott Haven
+ 75: ███████████████████████████████████████████ (6953) Brooklyn – East New York
+103: █████████████████████████████████████ (6010) Queens – Jamaica
+ 44: █████████████████████████████████████ (5978) Bronx – Concourse
+ 46: ████████████████████████████████ (5104) Bronx – University Heights
+120: ██████████████████████████████ (4877) Staten Island – St. George
+ 73: ████████████████████████████ (4580) Brooklyn – Brownsville
+ 47: ████████████████████████████ (4560) Bronx – Edenwald/Wakefield
+110: ███████████████████████████ (4409) Queens – Elmhurst
+======================================================================
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture_16_example.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 16 Example</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yanran
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

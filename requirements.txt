@@ -2,6 +2,7 @@ ipykernel
 pandas
 plotly
 matplotlib
+plotly.express
 
 # needed for plotly
 nbformat
